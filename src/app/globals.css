@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  background: #e8f4ef;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  background:
+    radial-gradient(circle at top left, rgba(217, 166, 46, 0.12), transparent 28rem),
+    linear-gradient(180deg, #e8f4ef 0%, #f8f6ef 100%);
+  color: #173a34;
+  font-family: "Plus Jakarta Sans", Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+@media (min-width: 391px) {
+  body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+  }
+}
+
+/* Keep the prototype faithful to a 390px handset even when previewed on desktop. */
+@media (min-width: 768px) {
+  .mobile-app .md\:grid-cols-2,
+  .mobile-app .md\:grid-cols-3,
+  .mobile-app .md\:grid-cols-4,
+  .mobile-app .md\:grid-cols-5,
+  .mobile-app .lg\:grid-cols-3,
+  .mobile-app .lg\:grid-cols-\[0\.9fr_1\.1fr\],
+  .mobile-app .lg\:grid-cols-\[0\.85fr_1\.15fr\],
+  .mobile-app .lg\:grid-cols-\[1fr_0\.75fr\],
+  .mobile-app .lg\:grid-cols-\[1fr_0\.85fr\],
+  .mobile-app .lg\:grid-cols-\[0\.8fr_1\.2fr\],
+  .mobile-app .lg\:grid-cols-\[0\.95fr_1\.05fr\],
+  .mobile-app .lg\:grid-cols-\[1\.05fr_0\.95fr\] {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .mobile-app .md\:p-10 {
+    padding: 1.5rem;
+  }
+
+  .mobile-app .md\:text-6xl {
+    font-size: 2.25rem;
+  }
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(217, 166, 46, 0.55);
+  outline-offset: 3px;
+}
+
+.safe-bottom {
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+}
+
+.animated-ring {
+  transition: stroke-dashoffset 900ms ease, stroke 400ms ease;
+}
